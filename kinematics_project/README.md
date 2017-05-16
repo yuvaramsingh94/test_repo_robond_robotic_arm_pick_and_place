@@ -7,8 +7,8 @@ Check the version of gazebo installed on your system using a terminal:
 ```sh
 $ gazebo --version
 ```
-To run projects from this repository you need version 7.6.0
-If your gazebo version is not 7.6.0, perform the update as follows:
+To run projects from this repository you need version 7.7.0+
+If your gazebo version is not 7.7.0+, perform the update as follows:
 ```sh
 $ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 $ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
@@ -24,7 +24,7 @@ $ gazebo --version
 Add following to your .bashrc file
 
 ```
-export GAZEBO_MODEL_PATH=~/RoboticsScratch/src/kinematics_project/kuka_arm/models
+export GAZEBO_MODEL_PATH=~/ros_ws/src/kinematics_project/kuka_arm/models
 
 source {path_to_ros_ws}/devel/setup.bash
 ```
