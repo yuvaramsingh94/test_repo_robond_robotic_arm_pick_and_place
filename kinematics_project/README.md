@@ -35,11 +35,26 @@ Now from a terminal window:
 $ cd ~ros_ws
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 $ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
-$ sudo chmod +x random_spawn.py
+$ sudo chmod +x target_spawn.py
+$ sudo chmod +x IK_server.py
 $ sudo chmod +x safe_spawner.sh
 $ ./safe_spawner.sh
 ```
+For demo mode make sure the **demo** flag is set to _"true"_ in `inverse_kinematics.launch` file under /kinematics_project/kuka_arm/launch
 
+In addition, you can also control the spawn location of the target object in the shelf. To do this, modify the **spawn_location** argument in `target_description.launch` file under /kinematics_project/kuka_arm/launch. 0-9 are valid values for spawn_location with 0 being random mode.
+
+You can launch the project by
+```sh
+$ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
+$ ./safe_spawner
+```
+
+If you are running in demo mode, this is all you need. To run your own Inverse Kinematics code change the **demo** flag described above to _"false"_ and run your code (once the project has successfully loaded) by:
+```sh
+$ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
+$ rosrun kuka_arm IK_server.py
+```
 Once Gazebo and rviz are up and running, make sure you see following in the gazebo world:
 
 	- Robot
@@ -64,6 +79,4 @@ The demo ends when the robot arm reaches at the top of the drop location.
 There is no loopback implemented yet, so you need to close all the terminal windows in order to restart.
 
 In case the demo fails, close all three terminal windows and rerun the script.
-
-
 
