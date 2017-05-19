@@ -38,7 +38,6 @@ $ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
 $ sudo chmod +x target_spawn.py
 $ sudo chmod +x IK_server.py
 $ sudo chmod +x safe_spawner.sh
-$ ./safe_spawner.sh
 ```
 For demo mode make sure the **demo** flag is set to _"true"_ in `inverse_kinematics.launch` file under /kinematics_project/kuka_arm/launch
 
