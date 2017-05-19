@@ -1,6 +1,4 @@
 <launch>
   <!--spawn target in gazebo world-->
-  <!--node name="target_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-  args="-urdf -param target_description -x 0 -y -1.0 -z 0 -R 0 -P 0 -Y 0 -model target_model"/-->
-  <node name="target_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" launch-prefix="/bin/bash -c '$* `rosparam get /hacky_target_spawn_location`' --"/>
+  <node name="target_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" launch-prefix="/bin/bash -c '$* `rosparam get /target_description_argument`' --"/>
 </launch>

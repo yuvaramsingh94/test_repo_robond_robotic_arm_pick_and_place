@@ -271,7 +271,7 @@
     <parent link="gripper_link" />
     <child link="right_gripper_finger_link" />
     <axis xyz="0 1 0" />
-    <limit effort="100" lower="0.0" upper="0.06" velocity="0.05" />
+    <limit effort="100" lower="-0.01" upper="0.06" velocity="0.05" />
     <dynamics damping="0.7" />
   </joint>
   <joint name="left_gripper_finger_joint" type="prismatic">
@@ -279,7 +279,7 @@
     <parent link="gripper_link" />
     <child link="left_gripper_finger_link" />
     <axis xyz="0 -1 0" />
-    <limit effort="100" lower="0.0" upper="0.06" velocity="0.05" />
+    <limit effort="100" lower="-0.01" upper="0.06" velocity="0.05" />
     <dynamics damping="0.7" />
   </joint>
   <joint name="gripper_joint" type="fixed">

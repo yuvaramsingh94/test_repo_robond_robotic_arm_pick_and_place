@@ -7,7 +7,7 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="harsh@electricmovement.com">harsh</maintainer>
+  <maintainer email="harsh@electricmovement.com">Harsh Pandya</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -25,7 +25,7 @@
   <!-- Author tags are optional, multiple are allowed, one per tag -->
   <!-- Authors do not have to be maintainers, but could be -->
   <!-- Example: -->
-  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+  <author email="harsh@electricmovement.com">Harsh Pandya</author>
 
 
   <!-- The *_depend tags are used to specify dependencies -->
@@ -42,12 +42,15 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>pluginlib</build_depend>
   <build_depend>eigen</build_depend>
+  <build_depend>eigen_conversions</build_depend>
+  <build_depend>message_generation</build_depend>
   <build_depend>moveit_core</build_depend>
   <build_depend>moveit_ros_planning_interface</build_depend>
   <build_depend>moveit_ros_perception</build_depend>
   <build_depend>interactive_markers</build_depend>
   <build_depend>geometric_shapes</build_depend>
   <build_depend>moveit_visual_tools</build_depend>
+  <build_depend>roslint</build_depend>
 
   <run_depend>controller_manager</run_depend>
   <run_depend>gazebo_plugins</run_depend>
@@ -56,6 +59,7 @@
   <run_depend>interactive_markers</run_depend>
   <run_depend>joint_state_publisher</run_depend>
   <run_depend>joint_trajectory_controller</run_depend>
+  <run_depend>message_runtime</run_depend>
   <run_depend>moveit_core</run_depend>
   <run_depend>moveit_fake_controller_manager</run_depend>
   <run_depend>moveit_ros_planning_interface</run_depend>
@@ -69,8 +73,5 @@
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
-    <gazebo_ros                                                                 
-        gazebo_plugin_path="~/RoboticsScratch"
-        gazebo_model_path="~/RoboticsScratch/src/kinematics_project/kuka_arm/models" />  
   </export>
 </package>

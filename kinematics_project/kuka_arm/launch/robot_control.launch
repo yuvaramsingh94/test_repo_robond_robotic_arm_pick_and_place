@@ -5,5 +5,4 @@
   <!--Load controllers-->
   <node name="spawner" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" ns="/kuka_arm" args="joint_state_controller arm_controller gripper_controller"/>
-    <!--l_gripper_controller r_gripper_controller"/-->
 </launch>
