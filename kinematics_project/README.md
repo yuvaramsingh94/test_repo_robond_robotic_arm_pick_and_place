@@ -39,6 +39,14 @@ $ sudo chmod +x target_spawn.py
 $ sudo chmod +x IK_server.py
 $ sudo chmod +x safe_spawner.sh
 ```
+
+Next we need to build the project
+```sh
+$ cd ~/ros_ws
+$ catkin_make
+$ source devel/setup.bash
+```
+
 For demo mode make sure the **demo** flag is set to _"true"_ in `inverse_kinematics.launch` file under /kinematics_project/kuka_arm/launch
 
 In addition, you can also control the spawn location of the target object in the shelf. To do this, modify the **spawn_location** argument in `target_description.launch` file under /kinematics_project/kuka_arm/launch. 0-9 are valid values for spawn_location with 0 being random mode.
