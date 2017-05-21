@@ -32,9 +32,9 @@ source {path_to_ros_ws}/devel/setup.bash
 Now from a terminal window:
 
 ```sh
-$ cd ~ros_ws
+$ cd ~/ros_ws
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
-$ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
+$ cd ~/ros_ws/src/kinematics_project/kuka_arm/scripts
 $ sudo chmod +x target_spawn.py
 $ sudo chmod +x IK_server.py
 $ sudo chmod +x safe_spawner.sh
@@ -45,13 +45,13 @@ In addition, you can also control the spawn location of the target object in the
 
 You can launch the project by
 ```sh
-$ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
+$ cd ~/ros_ws/src/kinematics_project/kuka_arm/scripts
 $ ./safe_spawner
 ```
 
 If you are running in demo mode, this is all you need. To run your own Inverse Kinematics code change the **demo** flag described above to _"false"_ and run your code (once the project has successfully loaded) by:
 ```sh
-$ cd ~ros_ws/src/kinematics_project/kuka_arm/scripts
+$ cd ~/ros_ws/src/kinematics_project/kuka_arm/scripts
 $ rosrun kuka_arm IK_server.py
 ```
 Once Gazebo and rviz are up and running, make sure you see following in the gazebo world:
