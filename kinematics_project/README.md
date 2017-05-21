@@ -21,12 +21,28 @@ Once again check if the correct version was installed:
 $ gazebo --version
 ```
 ### For the rest of this setup, ros_ws is the name of active ROS Workspace, if your workspace name is different, change the commands accordingly
+
+If you do not have an active ROS workspace, you can create one by:
+```sh
+$ mkdir -p ~/ros_ws/src
+$ cd ~/ros_ws/
+$ catkin_make
+```
+
+Now that you have a workspace, clone or download this repo into the **src** directory of your workspace and build it:
+```sh
+$ cd ~/ros_ws/src
+$ git clone https://github.com/udacity/test_repo_robond_robotic_arm_pick_and_place.git
+$ cd ~/ros_ws
+$ catkin_make
+```
+
 Add following to your .bashrc file
 
 ```
 export GAZEBO_MODEL_PATH=~/ros_ws/src/kinematics_project/kuka_arm/models
 
-source {path_to_ros_ws}/devel/setup.bash
+source ~/ros_ws/devel/setup.bash
 ```
 
 Now from a terminal window:
@@ -38,13 +54,6 @@ $ cd ~/ros_ws/src/kinematics_project/kuka_arm/scripts
 $ sudo chmod +x target_spawn.py
 $ sudo chmod +x IK_server.py
 $ sudo chmod +x safe_spawner.sh
-```
-
-Next we need to build the project
-```sh
-$ cd ~/ros_ws
-$ catkin_make
-$ source devel/setup.bash
 ```
 
 For demo mode make sure the **demo** flag is set to _"true"_ in `inverse_kinematics.launch` file under /kinematics_project/kuka_arm/launch
